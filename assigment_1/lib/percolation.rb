@@ -12,4 +12,12 @@ class Percolation
   def open?(a, b)
     system[a, b] == 0
   end
+
+  def percolates?
+  end
+
+  private
+
+    def initialize_tree
+    end
 end

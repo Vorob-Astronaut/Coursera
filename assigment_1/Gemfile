@@ -6,4 +6,5 @@ gem 'pry'
 
 group :test do
   gem 'rspec'
+  gem 'fabrication'
 end
