@@ -1,1 +1,3 @@
-http://coursera.cs.princeton.edu/algs4/assignments/percolation.html
+Coursera
+========
+Here will be solutions for tasks for coursera.org
