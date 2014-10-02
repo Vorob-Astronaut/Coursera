@@ -1,27 +1,26 @@
 require 'spec_helper'
 
 describe Node do
-    describe '#open?' do
+  let(:opened_node) { Node.new(0, :opened)}
+  let(:closed_node) { Node.new(0, :closed)}
+
+  describe '#open?' do
     it 'checks if can be true' do
-      node = Fabricate(:opened_node)
-      expect(node.opened?).to eq(true)
+      expect(opened_node.opened?).to eq(true)
     end
 
     it 'checks if can be false' do
-      node = Fabricate(:closed_node)
-      expect(node.opened?).to eq(false)
+      expect(closed_node.opened?).to eq(false)
     end
   end
 
   describe '#close?' do
     it 'checks if can be true' do
-      node = Fabricate(:closed_node)
-      expect(node.closed?).to eq(true)
+      expect(closed_node.closed?).to eq(true)
     end
 
     it 'checks if can be false' do
-      node = Fabricate(:opened_node)
-      expect(node.closed?).to eq(false)
+      expect(opened_node.closed?).to eq(false)
     end
   end
 end

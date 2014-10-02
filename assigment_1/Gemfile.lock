@@ -3,7 +3,6 @@ GEM
   specs:
     coderay (1.1.0)
     diff-lcs (1.2.5)
-    fabrication (2.11.3)
     method_source (0.8.2)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -27,6 +26,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  fabrication
   pry
   rspec
