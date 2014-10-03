@@ -9,11 +9,9 @@ class Tree
     return false if connected?(first_node, second_node)
 
     if first_node.size_of_tree > second_node.size_of_tree
-      second_node.root.father = first_node.root
-      first_node.size_of_tree += second_node.size_of_tree
+      first_node.add_node_as_child(second_node)
     else
-      first_node.root.father = second_node.root
-      second_node.size_of_tree += first_node.size_of_tree
+      second_node.add_node_as_child(first_node)
     end
 
     true

@@ -1,15 +1,18 @@
 require 'spec_helper'
 
 describe Tree do
+  let(:tree) { Tree.new }
+
   describe '#union' do
     it 'check if size of tree changed' do
       first_node = Node.new
       second_node = Node.new
+      third_node = Node.new
 
-      Tree.new.union(first_node, second_node)
+      tree.union(first_node, second_node)
+      tree.union(second_node, third_node)
 
-      expect(first_node.size_of_tree).to eq(2)
-      expect(second_node.size_of_tree).to eq(2)
+      expect(first_node.size_of_tree).to eq(3)
     end
   end
 

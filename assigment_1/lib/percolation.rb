@@ -15,9 +15,4 @@ class Percolation
 
   def percolates?
   end
-
-  private
-
-    def initialize_tree
-    end
 end
