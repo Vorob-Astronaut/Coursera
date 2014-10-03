@@ -25,12 +25,17 @@ describe Node do
   end
 
   describe '#root' do
-    it '#returns root' do
+    it 'returns root' do
       root = Node.new
       child = Node.new(father: root)
       sub_child = Node.new(father: child)
 
       expect(sub_child.root).to eq(root)
+    end
+
+    it 'return self' do
+      node = Node.new
+      expect(node.root).to eq(node)
     end
   end
 end
