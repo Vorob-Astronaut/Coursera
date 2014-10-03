@@ -1,5 +1,5 @@
 class Node
-  attr_reader :index, :state
+  attr_reader :state
   attr_accessor :father, :count_of_nodes
 
   def initialize(options = {})
@@ -23,7 +23,7 @@ class Node
     root.count_of_nodes = count
   end
 
-  def add_node_as_child(node)
+  def recalculate_size_with_addition_tree_as_child_of(node)
     self.size_of_tree += node.size_of_tree
     node.root.father = root
   end
@@ -40,5 +40,3 @@ class Node
     father.nil?
   end
 end
-
-
