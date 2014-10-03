@@ -45,13 +45,14 @@ describe Percolation do
       expect(percolation.percolates?).to eq(false)
     end
 
-    it 'return false' do
-      matrix = Matrix[[0,1,0],
-                      [1,0,1],
-                      [0,1,0]]
+    it 'return true' do
+      matrix = Matrix[[1,0,1,0],
+                      [1,0,1,1],
+                      [1,0,0,0],
+                      [1,1,1,0]]
       percolation = Percolation.new(matrix)
 
-      expect(percolation.percolates?).to eq(false)
+      expect(percolation.percolates?).to eq(true)
     end
 
 

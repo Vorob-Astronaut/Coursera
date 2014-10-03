@@ -8,7 +8,6 @@ class Percolation
   def percolates?
     initialize_system
 
-    @tree.bundle_nodes_to_fictional_nodes
     @tree.bundle_nodes_together_with_percolates_checking
   end
 
